@@ -181,6 +181,7 @@ body.nav-active{overflow: hidden;}
 
 
 
+
 /*-----------------------------------*\
   #TYPOGRAPHY
 \*-----------------------------------*/
@@ -363,6 +364,7 @@ body.nav-active{overflow: hidden;}
   position: absolute;
 }
 
+/* SERVICE START (Reused Style) */
 .section{
   position: relative;
   padding-block: var(--section-space) ;
@@ -417,6 +419,9 @@ body.nav-active{overflow: hidden;}
   z-index: -1;
 }
 
+/* SERVICE END (Reused Style) */
+
+
 .w-100{ width: 100%;}
 
 .move-anim{animation: move 5s linear infinite;}
@@ -428,11 +433,17 @@ body.nav-active{overflow: hidden;}
 }
 
 
+/* TESTIMONIALS START (Reused Style) */
+
 .has-bg-image{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+/* TESTIMONIALS END (Reused Style) */
+
+
+/* RESERVATION START (Reused Style) */
 
 .input-field{
   background-color: var(--eerie-black-2);
@@ -451,7 +462,7 @@ body.nav-active{overflow: hidden;}
 
 .icon-wrapper{
   position: relative;
-  margin-block-end: 10px;
+  margin-block-end: 20px;
 }
 
 .icon-wrapper .input-field{
@@ -485,20 +496,21 @@ body.nav-active{overflow: hidden;}
   right: 0;
   bottom: 0;
   background-color: var(--gold-crayola);
-  z-index: 10px;
+  z-index: 10;
   display: grid;
   place-content: center;
   justify-items: center;
   transition: var(--transition-2);
+  /* display:block ; */
 
-  display: none;
+  
 }
 .preload > * {transition: var(--transition-1);}
 
 .preload.loaded > * { opacity: 0; } 
 
 .preload.loaded{
-  transition-delay: 250ms;
+  transition-delay: 1000ms;
   transform: translateY(100%);
 }
 .circle{
@@ -508,11 +520,11 @@ body.nav-active{overflow: hidden;}
   border: 3px solid var(--white);
   border-block-start-color: var(--smoky-black-3);
   margin-block-end: 45px ;
-  animation : rotate360 1s linear infinite ;
+  animation : rotate360 5s linear infinite ;
 }
 @keyframes rotate360{
   0% {transform: rotate(0);}
-  100%{transform: rotate(1turn); }
+  100%{transform: rotate(2turn); }
 }
 .preload .text{
   background-image: var(--loading-text-gradient) ;
@@ -527,7 +539,7 @@ body.nav-active{overflow: hidden;}
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 0.5px var(--eerie-black-1);
-  animation: loadingText linear 2s infinite;
+  animation: loadingText linear 5s infinite;
 }
 
 @keyframes loadingText{
@@ -605,7 +617,7 @@ body.nav-active{overflow: hidden;}
   top: 0;
   left: -360px;
   bottom: 0;
-  max-width: 360px;
+  min-width: 360px;
   width: 100%;
   padding-inline: 30px;
   padding-block-end: 50px;
@@ -860,7 +872,7 @@ body.nav-active{overflow: hidden;}
 }
 
 .service-card:is(:hover, :focus-within) .has-before::before{
-  transform: rotateY(0.5turn) translateX(30%);
+  transform: rotateY(0.5turn) translateX(50%);
   transition-delay: 300ms;
 }
 .service-card .card-banner{transition: var(--transition-2);}
@@ -1073,7 +1085,7 @@ body.nav-active{overflow: hidden;}
 .profile .img{
   margin-inline: auto;
   border-radius: var(--radius-circle);
-  margin-inline-end: 15px;
+  margin-block-end: 15px;
 }
 
 
